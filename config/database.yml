@@ -48,7 +48,8 @@ production:
   <<: *default
   database: blog_production
   username: root
-  password: <%= ENV['BILLER_DATABASE_PASSWORD'] %>
+  password: golf4jer
+ 
 
 
 # development:
