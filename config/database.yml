@@ -47,9 +47,8 @@ test:
 production:
   <<: *default
   database: blog_production
-  username: root
-  password: golf4jer
- 
+
+
 
 
 # development:
