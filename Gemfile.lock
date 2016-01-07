@@ -154,7 +154,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
-  pygments.rb (~> 0.6.3)
+  pygments.rb (~> 0.6.0)
   rails (= 4.2.4)
   redcarpet (~> 3.3, >= 3.3.4)
   sass-rails (~> 5.0)
