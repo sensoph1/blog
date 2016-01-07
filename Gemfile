@@ -46,9 +46,9 @@ group :development do
   gem 'spring'
 end
 
- group :development do
-gem 'sqlite3'
-end
-group :production do
-gem 'mysql', '~> 2.9', '>= 2.9.1'
-end
+#  group :development do
+# gem 'sqlite3'
+# end
+# group :production do
+gem 'mysql2', '~>0.3.15'
+# end
