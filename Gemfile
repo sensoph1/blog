@@ -50,5 +50,5 @@ end
 gem 'sqlite3'
 end
 group :production do
-	gem "pg"
+gem 'mysql', '~> 2.9', '>= 2.9.1'
 end
