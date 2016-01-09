@@ -1,9 +1,12 @@
-<h1>Blog</h1>
+<div class="container">
+	<h1>Blog</h1>
 
-<% @posts.each do |post| %>
-	<h3><%= link_to post.title, post %></h3>
-	<p class="date"> 
-		<%= post.created_at.strftime("%A, %b %d") %>
-	</p>
+	<% @posts.each do |post| %>
+		<h3><%= link_to post.title, post %></h3>
+		<p class="date"> 
+			<%= post.created_at.strftime("%A, %b %d") %>
+		</p>
 	<% end %>
+
 	<%= link_to 'New Post', new_post_path %>
+</div>
