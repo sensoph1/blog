@@ -3,9 +3,11 @@ class PostsController < ApplicationController
 	def index		
 		@posts = Post.all.order("created_at desc")
 	end
+
 	def new
 		@post = Post.new
 	end
+	
 	def create
 		@post = Post.new post_params
 	
@@ -15,9 +17,11 @@ class PostsController < ApplicationController
 			render 'new', notice: "something happened"
 		end
 	end
+	
 	def show
 		
 	end
+	
 	def edit
 	end
 
@@ -28,6 +32,7 @@ class PostsController < ApplicationController
 			render 'edit', notice: "try again"
 		end
 	end
+	
 	def destroy
 		@post.destroy
 		redirect_to @post
@@ -38,9 +43,9 @@ class PostsController < ApplicationController
 
 private
 	def post_params
-		params.require(:post).permit(:title, :content)
+		params.require(:post).permit(:title, :content, :slug)
 	end
 	def find_post
-			@post = Post.find(params[:id])
+			@post = Post.friendly.find(params[:id])
 	end
 end
