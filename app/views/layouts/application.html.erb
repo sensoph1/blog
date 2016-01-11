@@ -21,6 +21,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/posts">Blog </a></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "signout", destroy_user_session_path, method: :delete%>
+          <% end %> 
+          
       
         
        
