@@ -10,6 +10,7 @@
 	</ul>
 <% end %>
 <div class="container">
+
 <%= f.label :title %><br>
 <%= f.text_field :title %>
 
@@ -20,6 +21,8 @@
 <%= f.text_area:content , class: "input-text-area"%>
 <br>
 <br>
+	<%= link_to "Cancel", posts_path %> <br>
+
 <%= f.submit %>
 <% end %>
 </div>
