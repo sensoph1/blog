@@ -11,19 +11,22 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top" role= "navigation">
   <div class="container">
     
-      <a class="navbar-brand" href="/">JeremyBarkley.com</a>
-     
+      
+     <%= link_to "JeremyBarkley.com", root_path , class:"navbar-brand"%>
       <div class="navbar-right">
-      <a class="navbar-brand " href="/posts">Blog </a>
-
+      
+      <%= link_to "Blog", posts_path , class:"navbar-brand"%>
+      
       <% if user_signed_in? %>
 
       <%= link_to "Create New", new_post_path , class:"navbar-brand"%>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
+      
       <% end %>
+
     </div>
 
     
