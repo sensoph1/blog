@@ -15,9 +15,26 @@
 .previous{
 	float: left;
 	
-	
-
 }
 .next{
 	float:right;
+}
+
+
+
+.col-sm-8{
+		font-size:2em;
+	}
+
+
+@media (min-width: 992px) {
+	.col-sm-8{
+		font-size:1em;
+	}
+}
+
+@media (min-width: 768px) {
+	.col-sm-8{
+		font-size:1.5em;
+	}
 }
