@@ -12,27 +12,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      
-      </button>
+  <div class="container">
+    
       <a class="navbar-brand" href="/">JeremyBarkley.com</a>
+     
+      <div class="navbar-right">
+      <a class="navbar-brand " href="/posts">Blog </a>
+      
+      <%= link_to "Create New", new_post_path , class:"navbar-brand"%>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/posts">Blog </a></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "signout", destroy_user_session_path, method: :delete%>
-          <% end %> 
-          
-      
-        
-       
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    
   </div><!-- /.container-fluid -->
 </nav>
    <% if notice %>
