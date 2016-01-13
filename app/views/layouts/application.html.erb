@@ -18,9 +18,12 @@
      
       <div class="navbar-right">
       <a class="navbar-brand " href="/posts">Blog </a>
-      
+
+      <% if user_signed_in? %>
+
       <%= link_to "Create New", new_post_path , class:"navbar-brand"%>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
+      <% end %>
     </div>
 
     
