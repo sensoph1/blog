@@ -1,5 +1,5 @@
 <div class="container" >
-	
+
 	<%= link_to "create new", new_post_path %>
 	<p class= "date"> <%= @post.created_at.strftime("%A, %B %d") %>
 <h1>
@@ -20,6 +20,18 @@
 	</div>
 
 	<% end %>
+
+<% if @post.previous.presence %>	
+<%= link_to "Previous Post", @post.previous %> 	
+<% end %>
+
+<% if @post.next.presence and @post.previous.presence %>	
+|
+<% end %>
+<% if @post.next.presence %>	
+<%= link_to "Next Post", @post.next %> 	
+<% end %>
+
 	<%= render 'disqus' %>
 
 </div>
