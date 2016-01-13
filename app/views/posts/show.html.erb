@@ -12,6 +12,21 @@
 
 <br>
 
+
+<% if @post.previous.presence %>	
+<div class="previous ">
+<%= link_to "Previous Post", @post.previous %> 	
+</div>
+<% end %>
+
+
+<% if @post.next.presence %>	
+<div class="next">
+	<%= link_to "Next Post", @post.next %> 	
+</div>
+<% end %>
+<br>
+<hr>
 <% if user_signed_in? %>
 	<div class="admin_links">
 <%= link_to "Edit", edit_post_path(@post) %> | 
@@ -20,17 +35,6 @@
 	</div>
 
 	<% end %>
-
-<% if @post.previous.presence %>	
-<%= link_to "Previous Post", @post.previous %> 	
-<% end %>
-
-<% if @post.next.presence and @post.previous.presence %>	
-|
-<% end %>
-<% if @post.next.presence %>	
-<%= link_to "Next Post", @post.next %> 	
-<% end %>
 
 	<%= render 'disqus' %>
 

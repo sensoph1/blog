@@ -19,3 +19,12 @@
 	width: 50% !important;
 	margin: auto;
 }
+.previous{
+	float: left;
+	
+	
+
+}
+.next{
+	float:right;
+}
