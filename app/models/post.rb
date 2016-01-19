@@ -5,7 +5,27 @@ class Post < ActiveRecord::Base
 	scope :next, lambda {|id| where("id > ?",id).order("id ASC") } # this is the default ordering for AR
 	scope :previous, lambda {|id| where("id < ?",id).order("id DESC") }
 
-	mount_uploader :featured, FeaturedUploader
+	attr_accessor :featured
+
+	after_save :save_featured, if: :featured
+
+	def save_featured
+			filename = featured.original_filename
+			folder = "public/posts/#{id}/featured"
+
+			FileUtils::mkdir_p folder
+
+			f = File.open File.join(folder, filename), 'wb'
+			f.write featured.read()
+			f.close
+
+			self.featured = nil
+			update image_filename: filename
+
+	end
+
+
+
 
 
 
