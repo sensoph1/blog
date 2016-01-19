@@ -2,6 +2,8 @@
 
 	<%= link_to "create new", new_post_path %>
 	<p class= "date"> <%= @post.created_at.strftime("%A, %B %d") %>
+
+<%= image_tag @post.featured.url if @post.featured? %>
 <h1>
 	<%= @post.title %>
 </h1>

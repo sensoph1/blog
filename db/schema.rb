@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160111160744) do
+ActiveRecord::Schema.define(version: 20160119203356) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160111160744) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "slug",       limit: 255
+    t.string   "featured",   limit: 255
   end
 
   create_table "users", force: :cascade do |t|

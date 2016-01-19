@@ -21,6 +21,10 @@
 <%= f.text_area:content , class: "input-text-area"%>
 <br>
 <br>
+<div class="form-group">
+	<%= f.label :featured %>
+	<%= f.file_field :featured %>
+</div>
 	<%= link_to "Cancel", posts_path %> <br>
 
 <%= f.submit %>
