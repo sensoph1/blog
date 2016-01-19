@@ -8,6 +8,7 @@
 /.bundle
 # ignore config/secrets.yml
 config/secrets.yml
+config/initializers/devise.rb
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
