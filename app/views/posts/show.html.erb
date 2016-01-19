@@ -2,7 +2,9 @@
 
 	<%= link_to "create new", new_post_path %>
 	<p class= "date"> <%= @post.created_at.strftime("%A, %B %d") %>
-<%= image_tag "/posts/#{@post.id}/featured/#{@post.image_filename}" if @post.image_filename? %>
+	</p>
+
+<%= image_tag "/posts/#{@post.id}/featured/#{@post.image_filename}", :class => "col-xs-12" if @post.image_filename? %>
 
 <h1>
 	<%= @post.title %>
