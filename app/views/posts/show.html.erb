@@ -4,7 +4,7 @@
 	<p class= "date"> <%= @post.created_at.strftime("%A, %B %d") %>
 	</p>
 
-<%= image_tag "/posts/#{@post.id}/featured/#{@post.image_filename}", :class => "col-xs-12" if @post.image_filename? %>
+<%= image_tag "/posts/#{@post.id}/featured/#{@post.image_filename}", :class => "col-xs-12" if "/posts/#{@post.id}/featured/#{@post.image_filename}"? %>
 
 <h1>
 	<%= @post.title %>
